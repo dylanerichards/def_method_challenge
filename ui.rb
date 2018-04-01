@@ -1,4 +1,4 @@
-require_relative "sorter"
+require_relative "lib/sorter"
 
 puts "Which file do you want to sort? "
 
