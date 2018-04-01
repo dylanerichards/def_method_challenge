@@ -1,6 +1,6 @@
 require_relative "lib/sorter"
 
-puts "Which file do you want to sort? "
+puts "Which file do you want to sort? 'comma', 'space', or 'pipe'? "
 
 input_file_map = {
   "space" => Sorter.output_1("input/space.txt"),
