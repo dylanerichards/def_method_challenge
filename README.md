@@ -8,4 +8,4 @@
 - When prompted, possible inputs are `comma`, `space`, and `pipe`.
 
 ## Running the unit tests
-- Run `rspec`
+- Run `rspec` from the command line
