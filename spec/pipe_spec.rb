@@ -1,5 +1,5 @@
-require_relative "../pipe"
-require_relative "../person"
+require_relative "../lib/pipe"
+require_relative "../lib/person"
 
 describe "Pipe" do
   describe ".call" do

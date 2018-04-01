@@ -1,5 +1,5 @@
-require_relative "../comma"
-require_relative "../person"
+require_relative "../lib/comma"
+require_relative "../lib/person"
 
 describe "Comma" do
   describe ".call" do

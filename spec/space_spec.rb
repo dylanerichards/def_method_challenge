@@ -1,5 +1,5 @@
-require_relative "../space"
-require_relative "../person"
+require_relative "../lib/space"
+require_relative "../lib/person"
 
 describe "Space" do
   describe ".call" do

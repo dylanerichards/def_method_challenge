@@ -1,8 +1,8 @@
-require_relative "../sorter"
-require_relative "../person"
-require_relative "../space"
-require_relative "../comma"
-require_relative "../pipe"
+require_relative "../lib/sorter"
+require_relative "../lib/person"
+require_relative "../lib/space"
+require_relative "../lib/comma"
+require_relative "../lib/pipe"
 
 describe "Sorter" do
   describe ".output_1" do

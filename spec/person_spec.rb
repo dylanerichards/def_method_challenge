@@ -1,4 +1,4 @@
-require_relative "../person"
+require_relative "../lib/person"
 
 describe Person do
   describe "#full_gender" do
