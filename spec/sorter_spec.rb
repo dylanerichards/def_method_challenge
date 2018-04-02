@@ -5,7 +5,7 @@ require_relative "../lib/comma"
 require_relative "../lib/pipe"
 
 describe "Sorter" do
-  describe ".output" do
+  describe ".call" do
     context "space as a delimiter" do
       it 'sorts space.txt: females first, then by last name ascending' do
         people = Sorter.("space").map(&:last_name)
