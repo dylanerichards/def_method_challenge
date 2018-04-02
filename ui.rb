@@ -1,5 +1,5 @@
 require_relative "lib/sorter"
-require_relative "lib/decorators/person_presenter"
+require_relative "lib/presenters/person_presenter"
 
 puts "Which file do you want to sort? 'comma', 'space', or 'pipe'? "
 
