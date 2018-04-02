@@ -5,6 +5,4 @@ puts "Which file do you want to sort? 'comma', 'space', or 'pipe'? "
 
 people = Sorter.(gets.chomp)
 
-people.map do |person|
-  puts PersonDecorator.new(person).to_s
-end
+people.map { |person| puts PersonDecorator.new(person).to_s }
