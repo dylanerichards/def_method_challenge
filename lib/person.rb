@@ -9,9 +9,5 @@ class Person
     @favorite_color = favorite_color
     @dob = dob
   end
-
-  def full_gender
-    { "M" => "Male", "F" => "Female" }[self.gender] || gender
-  end
 end
 
