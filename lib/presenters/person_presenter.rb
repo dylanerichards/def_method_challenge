@@ -1,6 +1,6 @@
 require 'forwardable'
 
-class PersonDecorator
+class PersonPresenter
   extend Forwardable
 
   def_delegators :@person, :last_name, :first_name, :dob, :favorite_color, :gender
