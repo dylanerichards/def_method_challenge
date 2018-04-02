@@ -9,7 +9,7 @@ class Sorter
   PIPE =  lambda  { |people| people.sort_by(&:last_name).reverse }
 
   def self.call(delimiter)
-    Sorter.const_get(delimiter.upcase).(Object.const_get("Parser::#{delimiter.capitalize}").("input/#{delimiter}.txt"))
+    const_get(delimiter.upcase).(Object.const_get("Parser::#{delimiter.capitalize}").("input/#{delimiter}.txt"))
   end
 end
 
