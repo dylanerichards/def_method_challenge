@@ -2,10 +2,8 @@ require_relative "lib/sorter"
 
 puts "Which file do you want to sort? 'comma', 'space', or 'pipe'? "
 
-input_file_map = {
-  "space" => Sorter.output_1("input/space.txt"),
-  "comma" => Sorter.output_2("input/comma.txt"),
-  "pipe" => Sorter.output_3("input/pipe.txt")
-}
+people = Sorter.(gets.chomp)
 
-puts input_file_map[gets.chomp].map { |person| "#{person.last_name} #{person.first_name} #{person.full_gender} #{person.dob} #{person.favorite_color}"  }
+people.map do |person|
+  puts "#{person.last_name} #{person.first_name} #{person.full_gender} #{person.dob} #{person.favorite_color}"
+end

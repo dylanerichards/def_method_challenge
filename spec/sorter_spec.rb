@@ -5,27 +5,29 @@ require_relative "../lib/comma"
 require_relative "../lib/pipe"
 
 describe "Sorter" do
-  describe ".output_1" do
-    it 'sorts space.txt: females first, then by last name ascending' do
-      people = Sorter.output_1("input/space.txt")
+  describe ".output" do
+    context "space as a delimiter" do
+      it 'sorts space.txt: females first, then by last name ascending' do
+        people = Sorter.("space").map(&:last_name)
 
-      expect(people.map(&:last_name)).to eq ["Hingis", "Kournikova", "Seles", "Richards"]
+        expect(people).to eq ["Hingis", "Kournikova", "Seles", "Richards"]
+      end
     end
-  end
 
-  describe ".output_2" do
-    it 'sorts comma.txt: by birth date, ascending then by last name ascending' do
-      people = Sorter.output_2("input/comma.txt")
+    context "comma as a delimiter" do
+      it 'sorts comma.txt: by birth date, ascending then by last name ascending' do
+        people = Sorter.("comma").map(&:last_name)
 
-      expect(people.map(&:last_name)).to eq ["Aakerman", "Abercrombie", "Kelly", "Bishop", "Lello"]
+        expect(people).to eq ["Aakerman", "Abercrombie", "Kelly", "Bishop", "Lello"]
+      end
     end
-  end
 
-  describe ".output_3" do
-    it 'sorts pipe.txt: by last name, descending' do
-      people = Sorter.output_3("input/pipe.txt")
+    context "pipe as a delimiter" do
+      it 'sorts pipe.txt: last name, descending' do
+        people = Sorter.("pipe").map(&:last_name)
 
-      expect(people.map(&:last_name)).to eq ["Smith", "Bouillon", "Bonk"]
+        expect(people).to eq ["Smith", "Bouillon", "Bonk"]
+      end
     end
   end
 end

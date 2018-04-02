@@ -4,16 +4,12 @@ require_relative "comma"
 require_relative "pipe"
 
 class Sorter
-  def self.output_1(file_path)
-    Parser::Space.(file_path).sort_by { |player| [player.gender, player.last_name] }
-  end
+  SPACE = lambda  { |people| people.sort_by { |person| [person.gender, person.last_name] } }
+  COMMA = lambda  { |people| people.sort_by { |person| [Date.strptime(person.dob,"%m/%d/%Y"), person.last_name] } }
+  PIPE =  lambda  { |people| people.sort_by(&:last_name).reverse }
 
-  def self.output_2(file_path)
-    Parser::Comma.(file_path).sort_by { |player| [Date.strptime(player.dob,"%m/%d/%Y"), player.last_name] }
-  end
-
-  def self.output_3(file_path)
-    Parser::Pipe.(file_path).sort_by(&:last_name).reverse
+  def self.call(delimiter)
+    Sorter.const_get(delimiter.upcase).(Object.const_get("Parser::#{delimiter.capitalize}").("input/#{delimiter}.txt"))
   end
 end
 
