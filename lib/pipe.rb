@@ -1,6 +1,4 @@
 require "parser"
-require "date"
-
 
 class Parser::Pipe
   def self.call(file_path)

@@ -1,6 +1,4 @@
 require "parser"
-require "date"
-
 
 class Parser::Comma
   def self.call(file_path)
