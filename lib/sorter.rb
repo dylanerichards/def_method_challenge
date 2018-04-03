@@ -2,6 +2,7 @@ require_relative "person"
 require_relative "space"
 require_relative "comma"
 require_relative "pipe"
+require          "date"
 
 class Sorter
   SPACE = lambda  { |people| people.sort_by { |person| [person.gender, person.last_name] } }
